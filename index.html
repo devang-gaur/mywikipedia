@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+
+  <title>My Wikimedia</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
+  <link href="css/mobile.css" rel="stylesheet" type="text/css" media="screen and (max-width: 480px)" />
+
+</head>
+
+<body>
+
+<div id="mySidenav" class="sidenav">
+
+  <form id="lone-form" action="">
+
+    <li><input class="form-el"type="text" id="wiki-title" /></li>
+
+    <li>
+      <select id="lang-opt" class="form-el">
+        <option value="en">English</option>
+        <option value="es">Spanish</option>
+        <option value="nl">Netherlands</option>
+        <option value="hi">Hindi</option>
+        <option value="de">German</option>
+        <option value="fr">French</option>
+        <option value="pt">Portuguese</option>
+        <option value="ru">Russian</option>
+        <option value="ko">Korean</option>
+        <option value="ja">Japanese</option>
+      </select>
+    </li>
+
+    <li><input type="submit" class="form-el" id="fetch-btn" value="Fetch" /></li>
+
+  </form>
+
+</div>
+
+<div id="main">
+  <span id="hamburger-span" style="font-size:30px;cursor:pointer;float : left;" onclick="toggleNav()">&#9776;</span>
+  <div id="heading"><h4>My Wikipedia</h4></div>
+  <div id="summary"></div>
+</div>
+
+<script type="text/javascript" src="js/script.js">
+
+</script>
+<script>
+function toggleNav() {
+
+    if(document.getElementById("mySidenav").style.width == "30%"){
+      document.getElementById("mySidenav").style.width = "0%";
+      document.getElementById("mySidenav").style.border = "none";
+      document.getElementById("main").style.marginLeft= "0%";
+    } else {
+      document.getElementById("mySidenav").style.width = "30%";
+      document.getElementById("mySidenav").style["border-right"] = "2px solid black";
+      document.getElementById("main").style.marginLeft = "30%";
+    }
+}
+
+</script>
+
+</body>
+</html>
