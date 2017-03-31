@@ -43,9 +43,10 @@ div#heading {
 
 #main {
     margin-left: 30%;
+    transition: 0.5s;
 }
 
-#summary {
+#extract {
   margin: 3em 1em 1em 1em;
   padding-left: 0.5em;
   clear: both;
